@@ -1,5 +1,8 @@
 name: "Update sfdx-project.json package version"
 description: "Auto-updates sfdx-project.json package version"
+branding:
+  icon: 'chevron-up'  
+  color: 'black'
 inputs:
   package-names:
     description: "Which packages to update package version (add space between package names)"
