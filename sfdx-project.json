@@ -1,0 +1,22 @@
+{
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "package": "test-app",
+            "versionName": "ver 2.1",
+            "versionNumber": "2.1.0.NEXT",
+            "definitionFile": "config/project-scratch-def.json",
+            "default": false
+        },
+        {
+            "path": "force-app",
+            "package": "test-app2",
+            "versionName": "ver 5.6",
+            "versionNumber": "5.6.7.NEXT",
+            "definitionFile": "config/project-scratch-def.json"
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "",
+    "sourceApiVersion": "52.0"
+}

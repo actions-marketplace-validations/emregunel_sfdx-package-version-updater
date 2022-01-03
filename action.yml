@@ -1,0 +1,24 @@
+name: "Update sfdx-project.json package version"
+description: "Auto-updates sfdx-project.json package version"
+inputs:
+  package-names:
+    description: "Which packages to update package version (add space between package names)"
+    required: true
+  upgrade-type:
+    description: "Type of package upgrade [MAJOR/MINOR/PATCH] used for semantic versioning"
+    required: true
+    default: "PATCH"
+outputs:
+  time:
+    description: "The time sfdx-project.json get updated"
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        bash $GITHUB_ACTION_PATH/entrypoint.sh
+      id: sfdx-package-version-updater
+      shell: bash
+      env:
+        GITHUB_WORKSPACE: ${{ github.workspace }}
+        PACKAGE_NAMES: ${{ inputs.package-names }}
+        UPGRADE_TYPE: ${{ inputs.upgrade-type }}
